@@ -117,12 +117,6 @@ set nofoldenable
 set splitright
 set splitbelow
 
-"Use alt+hjkl to move between split/vsplit panels 
-nnoremap ˙ <C-w>h
-nnoremap ∆ <C-w>j
-nnoremap ˚ <C-w>k
-nnoremap ¬ <C-w>l
-
 "Misc
 set autoread
 set backspace=indent,eol,start
@@ -144,6 +138,13 @@ set shiftwidth=2
 set smarttab
 set tabstop=2
 set relativenumber
+set completeopt=menu,menuone,noselect
+"
+"Use alt+hjkl to move between split/vsplit panels 
+nnoremap ˙ <C-w>h
+nnoremap ∆ <C-w>j
+nnoremap ˚ <C-w>k
+nnoremap ¬ <C-w>l
 "--------------------
 
 "FZF Stuff-----------
