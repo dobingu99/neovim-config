@@ -33,7 +33,7 @@ cmp.setup({
   })
 
 
-require 'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup({
   ensure_installed = { "java" },
   sync_install = false,
   auto_install = true,
@@ -59,7 +59,7 @@ require 'nvim-treesitter.configs'.setup {
       show_help = '?',
     },
   }
-}
+})
 
 require('everblush').setup({
     override = {
