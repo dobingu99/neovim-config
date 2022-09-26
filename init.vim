@@ -28,7 +28,9 @@ call plug#begin("~/.vim/plugged")
   Plug 'justinmk/vim-sneak'
   Plug 'preservim/nerdcommenter'
   Plug 'tpope/vim-fugitive'
+  "themes"
   Plug 'Everblush/everblush.nvim', { 'as': 'everblush'}
+  Plug 'glepnir/zephyr-nvim'
   Plug 'APZelos/blamer.nvim'
   Plug 'enricobacis/vim-airline-clock'
   Plug 'nvim-lualine/lualine.nvim'
@@ -45,6 +47,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/nvim-cmp'
+  "diffview"
+  Plug 'sindrets/diffview.nvim'
 call plug#end()
 "
 "Config Section
@@ -87,6 +91,7 @@ tnoremap <Esc> <C-\><C-n>
 function! OpenTerminal()
   vsplit term://zsh
   vertical resize 50
+  setlocal nonumber norelativenumber
 endfunction 
 nnoremap <c-n> :call OpenTerminal()<CR>
 "--------------------
@@ -173,6 +178,9 @@ inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<TAB>"
 "setup mapping to call :lazygit
 nnoremap <silent> <Leader>gg :LazyGit<CR>
 
+"buffer management stuff 
+nnoremap <silent> <Leader>n :bnext <CR>
+
 "vim sneak stuff
 map f <Plug>Sneak_s
 map F <Plug>Sneak_S
@@ -180,6 +188,7 @@ map F <Plug>Sneak_S
 "Lua requirements 
 lua require('init')
 
+let g:coc_node_path = "/Users/brandonwong/.nvm/versions/node/v16.13.0/bin/node"
 "Blamer stuff------- 
 let g:blamer_enabled=1
 let g:blamer_delay=250
