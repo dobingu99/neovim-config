@@ -116,6 +116,13 @@ lualine.setup {
   },
 }
 
+--HTML LSP snippet
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+require'lspconfig'.html.setup{
+  capabilities = capabilities,
+}
+
 
 
 return { setup = setup, toggle = toggle }
