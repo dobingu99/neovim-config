@@ -81,6 +81,7 @@ local t = vim.tbl_add_reverse_lookup({
   ['up'] = 'down',
   ['male'] = 'female',
   ['minty'] = 'finty',
+  ['enable'] = 'disable',
 })
 
 local setup = function(u_tbl)
