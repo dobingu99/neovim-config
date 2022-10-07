@@ -47,6 +47,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'hrsh7th/cmp-path'
   Plug 'hrsh7th/cmp-cmdline'
   Plug 'hrsh7th/nvim-cmp'
+  Plug 'romgrk/barbar.nvim'
   "diffview"
   Plug 'sindrets/diffview.nvim'
 call plug#end()
@@ -185,8 +186,13 @@ nnoremap <silent> <Leader>n :bnext <CR>
 map f <Plug>Sneak_s
 map F <Plug>Sneak_S
 
+"barbar stuff
+nnoremap <silent>    <g-t> <Cmd>BufferPrevious<CR>
+nnoremap <silent>    <g-T> <Cmd>BufferNext<CR>
+
 "Lua requirements 
 lua require('init')
+
 
 let g:coc_node_path = "/Users/brandonwong/.nvm/versions/node/v16.13.0/bin/node"
 "Blamer stuff------- 
