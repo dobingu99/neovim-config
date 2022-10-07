@@ -29,4 +29,15 @@ local config= {
     },
     root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'}),
   }
+require'lspconfig'.gradle_ls.setup{
+  cmd = {
+    "gradle-language-server", "/Users/brandonwong/.config/nvim/vscode-gradle/gradle-language-server"
+  },
+  filetypes = {
+    "gradle"
+  }
+}
+require'lspconfig'.html.setup {}
 require('jdtls').start_or_attach(config)
+require'lspconfig'.html.setup{}
+require'lspconfig'.cssmodules_ls.setup{}
