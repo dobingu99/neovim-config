@@ -61,6 +61,9 @@ config.settings = {
       }
     }
   }
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 require'lspconfig'.gradle_ls.setup{
   cmd = {
     "gradle-language-server", "/Users/brandonwong/.config/nvim/vscode-gradle/gradle-language-server"
