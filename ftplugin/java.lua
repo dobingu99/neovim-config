@@ -3,7 +3,7 @@ local workspace_dir = "/Users/brandonwong/Work Documents/Git/"
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local lombok_version = ''
-local lombok_jar = '$HOME/Users/brandonwong/Downloads/lombok.jar'
+local lombok_jar = '/Users/brandonwong/.config/nvim/lombok.jar'
 
 local is_file_exist = function(path)
   local f = io.open(path, 'r')
@@ -72,7 +72,4 @@ require'lspconfig'.gradle_ls.setup{
     "gradle"
   }
 }
-require'lspconfig'.html.setup {}
 require('jdtls').start_or_attach(config)
-require'lspconfig'.html.setup{}
-require'lspconfig'.cssmodules_ls.setup{}
