@@ -181,6 +181,7 @@ nnoremap <silent> <Leader>gg :LazyGit<CR>
 
 "buffer management stuff 
 nnoremap <silent> <Leader>n :bnext <CR>
+nnoremap <silent> <Leader>l :Buffers <CR>
 
 "vim sneak stuff
 map f <Plug>Sneak_s
