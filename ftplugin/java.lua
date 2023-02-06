@@ -1,5 +1,5 @@
 -- Must change for each project 
-local workspace_dir = "/Users/brandonwong/iCloud Drive (Archive)/Documents/Git/"
+local workspace_dir = "/Users/brandonwong/Work Documents/Git/"
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
 local lombok_version = ''
