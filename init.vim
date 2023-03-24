@@ -54,6 +54,10 @@ call plug#end()
 "
 "Config Section
  
+"change leader key to spacebar 
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 "Colorscheme options
 colorscheme everblush
 
@@ -70,7 +74,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "autocmd VimEnter * NERDTree
 "
 " Toggle
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 "
 "Open on new tab 
 "autocmd BufEnter * NERDTreeMirror
@@ -162,14 +166,14 @@ nnoremap ¬ <C-w>l
 "--------------------
 
 "FZF Stuff-----------
-nnoremap <C-p> :FZF<CR>
+nnoremap <Leader>p :FZF<CR>
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit',
   \}
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --no-ignore-vcs -g "!node_modules/*" -g "!.git/*" -g "!*.class" -g "!bin/*"'
-nnoremap <silent> <C-\> :FzfPreviewProjectFilesRpc<CR>
+nnoremap <silent> <Leader>\ :FzfPreviewProjectFilesRpc<CR>
 nnoremap <silent> <Leader>f :Rg<CR>
 nnoremap <silent> <Leader>d :Lines<CR>
 
